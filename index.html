@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>OpenProject: A year Full of Updates</title>
+  <title>The Sovereign Exit from Jira: OpenProject and Nextcloud Hub</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
@@ -19,13 +19,13 @@
 <div class="reveal">
   <div class="slides">
     <section data-background-image="images/layout/background.png" data-transition="fade fade-out">
-      <h3 style="padding-top: 4rem;"><span>OpenProject</span></h3>
+      <h3 style="padding-top: 4rem;"><span>The Sovereign Exit from Jira</span></h3>
       <h1>
         <span>
-          A year Full of Updates
+          OpenProject and Nextcloud Hub
         </span>
       </h1>
-      <p style="margin-top: 11rem;">
+      <p style="margin-top: 9rem;">
         <small>
           Wieland Lindenthal - Co-founder and CTO of OpenProject<br>
           <a href="https://openproject.org">OpenProject.org</a> &middot;
@@ -33,12 +33,37 @@
           <a href="https://fosstodon.org/@wielinde">@wielinde@fosstodon.org</a>
          </small>
       </p>
+      <p style="margin-top: 2rem;">
+        <small>Nextcloud Community Conference 2026 &middot; Berlin</small>
+      </p>
     </section>
 
     <section data-background-image="images/2024/OpenProject-Teambild-b659df76.webp" data-hide-footer="true">
       <h1 style="text-align: left; margin-top: -260px; margin-left: 130px;">
         Hello!
       </h1>
+    </section>
+
+    <section>
+      <h3 id="jira-eol">
+        Atlassian announced end of "Data Center" for 2029
+      </h3>
+      <img src="images/2026/jira-alternative.png" class="r-frame no-border" width="1100px" >
+      <h4>Sovereign Jira and Confluence alternative</h4>
+    </section>
+
+    <section>
+      <h3 class="r-fit-text">... both are deeply integrated with Nextcloud Hub</h3>
+      <img class="r-frame no-border" width="1100px" src="images/nextcloud-platform-ecosystem-highlighted.png">
+    </section>
+
+    <section data-transition="slide" data-background-image="images/layout/background.png">
+      <h4 class="r-fit-text">Why sovereignty, why now</h4>
+      <ul>
+        <li>Self-hosted Jira/Confluence customers are being pushed to Atlassian's cloud</li>
+        <li>Renewed EU concerns about lock-in, pricing and the US Cloud Act</li>
+        <li>Public sector and enterprises building sovereign digital workplaces around Nextcloud Hub</li>
+      </ul>
     </section>
 
     <section data-background-image="images/layout/background.png" data-transition="slide" data-hide-footer="true">
@@ -51,9 +76,171 @@
 
     <section data-markdown data-transition="fade-in fade-out">
       <textarea data-template>
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        # What's new?
+        <!-- .slide: data-transition="slide" data-background-image="images/layout/background.png" -->
+        ## OpenProject as a <span class="underlayed">Component</span> of
+        # ☁️ Nextcloud Hub
         ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        #### Organized by function, not by brand
+        ## Task management + File storage, deeply integrated
+      </textarea>
+    </section>
+
+    <section>
+      <h3>Example</h3>
+      <h4>Deep integration of Nextcloud and OpenProject</h4>
+      <aside class="notes">
+        Let's have a look what it really means to deeply integrate two systems.
+      </aside>
+    </section>
+
+    <section data-transition="slide-in fade-out">
+      <h1 class="r-fit-text">Nextcloud is mainly a file storage platform</h1>
+      <img class="r-frame" src="images/nextcloud.png" width="700">
+    </section>
+
+    <section>
+      <h2>Real challenges for an organisation</h2>
+      <ul>
+        <li>Problem 1: <i style="font-style: italic;">"Where are the files for my task?"</i></li>
+        <li>Problem 2: <i style="font-style: italic;">"Does everyone in my team have access?"</i></li>
+        <li>Problem 3: <i style="font-style: italic;">"I want similar projects to easily follow the same structure"</i></li>
+      </ul>
+      <aside class="notes">
+        Exactly what teams migrating away from Jira and Confluence run into all day long.
+        <ul>
+          <li>There are almost no files without a task</li>
+          <li>There are almost no tasks without files</li>
+          <li>There is almost no team without a shared folder somewhere</li>
+          <li>Repeating projects, tasks, files and folder structures need templates</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section data-transition="slide" data-background-image="images/layout/background.png">
+      <h3>Integration wins over feature duplication</h3>
+      <ul>
+        <li>OpenProject has very basic file management, e.g. attachments</li>
+        <li>Nextcloud has very basic task management, e.g. Deck</li>
+        <li>Integration allows both to focus on their own core strengths</li>
+        <li>No feature parity race, no lock-in between the two</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="r-fit-text">In OpenProject: Show relevant files/folders for a work package</h3>
+      <img class="r-frame" src="images/work_package.png" width="1000">
+    </section>
+
+    <section>
+      <h3 class="r-fit-text">In OpenProject: Share access by saving files in the project folder</h3>
+      <img class="r-frame" src="images/location_picker.png" width="700">
+    </section>
+
+    <section>
+      <h3 class="r-fit-text">In Nextcloud: Link a file/folder to a work package</h3>
+      <img class="r-frame" src="images/file.png" width="1000">
+    </section>
+
+    <section data-markdown data-transition="fade-in fade-out">
+      <textarea data-template>
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ## Seamless integrations build on
+        #### <span class="underlayed">Helm</span> <span class="underlayed">OIDC</span> <span class="underlayed">SCIM</span> <span class="underlayed">JWT</span> <span class="underlayed">Token Exchange</span>
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ### User Provisioning
+        # SCIM
+        ---
+        <!-- .slide: data-hide-footer="true" data-background-image="images/2026/scim_api.gif" data-background-size="contain" data-background-repeat="no-repeat" data-background-color="#3b0944" -->
+      </textarea>
+    </section>
+
+    <section>
+      <h3 class="r-fit-text"><span class="underlayed">Seamless Cross Application User Integration</span><br>
+        Supporting Standards: OAuth 2 Token Exchange and SCIM</h3><br>
+      <img class="r-frame no-border" height="460px" src="images/2024/Keycloak%20idP.png">
+      <aside class="notes">
+        This pushes integrations of independent vendors in the open source eco-system massively forward.
+        Use cases like our super deep bi-directional integration with Nextcloud become so much smoother.
+        App suites like Nextcloud Hub only find adoption if cross application user integration is solved.
+        It is complex and expensive. It needs to get simpler and out of our way.
+        Fortunately there are open standards for OIDC and Token Exchange for delegated access, and for user provisioning via SCIM.
+      </aside>
+    </section>
+
+    <section data-markdown data-transition="fade-in fade-out">
+      <textarea data-template>
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ### Documents with Real-time Collaboration
+        ---
+        <!-- .slide: data-hide-footer="true" data-background-image="images/2026/real_time_collaboration.gif" data-background-size="contain" data-background-repeat="no-repeat" data-background-color="#3b0944" -->
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ## BlockNote rocks 🤘
+        #### *"Build a Notion-style editor in minutes."*
+        #### A shared foundation across the open source collaboration ecosystem
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ## Reusable BlockNote extensions simplify integration with Nextcloud Hub
+        #### Example: no slash commands for linking work packages need to be developed from scratch
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ### Goal for 2026
+        ## Real-time Collaboration for Work Packages
+      </textarea>
+    </section>
+
+    <section data-markdown data-transition="fade-in fade-out">
+      <textarea data-template>
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        # Migrating from Jira?
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ### End of Q1
+        # Jira Import Wizard
+        #### Recreate Jira projects and issues in OpenProject
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        # Jira fundamentals
+        - "Speaking" work package identifiers, e.g. "POC-34", coming end of Q1
+        - "If this than that" Automations
+        - More config autonomy for project admins
+        - ...
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        ### In Q1 and Q2
+        # Improved <span class="underlayed">Agile</span> project management
+        - Sprint planning independent of versions
+        - Backlog management
+        ---
+        <!-- .slide: data-background-image="images/layout/background.png" -->
+        # Stay tuned!
+      </textarea>
+    </section>
+
+    <section data-background-image="images/layout/background.png">
+      <h1 class="r-fit-text" style="padding-top: 13rem;">Integrated we are stronger</h1>
+      <p style="padding-top: 13rem;">
+        <small>
+          Wieland Lindenthal - Co-founder and CTO of OpenProject<br>
+          <a href="https://openproject.org">OpenProject.org</a> &middot;
+          <a href="#">@w.lindenthal:openproject.org</a> &middot;
+          <a href="https://fosstodon.org/@wielinde">@wielinde@fosstodon.org</a>
+        </small>
+      </p>
+    </section>
+
+    <section data-background-image="images/layout/background.png" data-transition="fade fade-out">
+      <h1>
+        <span>
+          Backup
+        </span>
+      </h1>
+    </section>
+
+    <section data-markdown data-transition="fade-in fade-out">
+      <textarea data-template>
         <!-- .slide: data-background-image="images/layout/background.png" -->
         ### Automatic Work Package Subjects
         ---
@@ -97,53 +284,34 @@
         # Search
         ---
         <!-- .slide: data-hide-footer="true" data-background-image="images/2026/search.gif" data-background-size="contain" data-background-repeat="no-repeat" data-background-color="#3b0944" -->
-        ---
-        <!-- .slide: data-transition="slide" data-background-image="images/layout/background.png" -->
-        ### Documents with Real-time Collaboration
-        ---
-        <!-- .slide: data-hide-footer="true" data-background-image="images/2026/real_time_collaboration.gif" data-background-size="contain" data-background-repeat="no-repeat" data-background-color="#3b0944" -->
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ## BlockNote rocks 🤘
-        #### *"Build a Notion-style editor in minutes."*
-        #### Used in Docs/Notes module of
-        - 🥨 openDesk
-        - 🥖 LaSuite
-        - 🧀 MijnBureau
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ## Reusable BlockNote extension simplify integrations
-        #### Example: For openDesk and MijnBureau no slash commands for linking work packages need to be developed
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ### Goal for 2026
-        ## Real-time Collaboration for Work Packages
-        ---
-        <!-- .slide: data-transition="slide" data-background-image="images/layout/background.png" -->
-        ## OpenProject as a <span class="underlayed">Component</span> of
-        - ☁️ Nextcloud Hub
-        - 🥨 openDesk
-        - 🧀 MijnBureau
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ## Seamless integrations build on
-        #### <span class="underlayed">Helm</span> <span class="underlayed">OIDC</span> <span class="underlayed">SCIM</span> <span class="underlayed">JWT</span> <span class="underlayed">Token Exchange</span>
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ### User Provisioning
-        # SCIM
-        ---
-        <!-- .slide: data-hide-footer="true" data-background-image="images/2026/scim_api.gif" data-background-size="contain" data-background-repeat="no-repeat" data-background-color="#3b0944" -->
-
       </textarea>
     </section>
 
     <section>
-      <h3 id="openproject-2024-rapid-innovation-and-user-driven-improvements">
-        Atlassian announced end of "Data Center" for 2029
-      </h3>
-      <img src="images/2026/jira-alternative.png" class="r-frame no-border" width="1100px" >
-      <h4>Sovereign Jira and Confluence alternative</h4>
+      <h1 class="r-fit-text">Project templates improve quality and speed</h1>
+      <ul>
+        <li>Provide template task lists</li>
+        <li>with related template files</li>
+        <li>in a template folder structure</li>
+      </ul>
+      <aside class="notes">
+        ...to ensure
+        <ul>
+          <li>not to forget important steps</li>
+          <li>speed up the process</li>
+          <li>improve quality</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section>
+      <h3 class="r-fit-text"><span class="underlayed">Seamless Cross Application User Integration</span><br>
+        XWiki Integration: The Jira and Confluence alternative</h3><br>
+      <img class="r-frame no-border" width="1000px" src="images/2024/openproject-jira-alternative-opensource.jpg">
+      <aside class="notes">
+        Atlassian stripping their support for on-premises installations.
+        Prices are increasing.
+      </aside>
     </section>
 
     <section data-markdown data-transition="fade-in fade-out">
@@ -153,74 +321,17 @@
         # XWiki Integration
         - Link work packages with Wiki pages
         - Many Wiki macros for projects, work packages and graphs
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ### End of Q1
-        # Jira Import Wizzard
-        #### Recreate Jira projects and issues in OpenProject
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        ### In Q1 and Q2
-        # Improved <span class="underlayed">Agile</span> project management
-        - Sprint planning independent of versions
-        - Backlog management
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        # Jira fundamentals
-        - "Speaking" work package identifiers, e.g. "POC-34", coming end of Q1
-        - "If this than that" Automations
-        - More config autonomy for project admins
-        - ...
-        ---
-        <!-- .slide: data-background-image="images/layout/background.png" -->
-        # Stay tuned!
       </textarea>
     </section>
 
-    <section data-background-image="images/layout/background.png">
-      <h1 class="r-fit-text" style="padding-top: 13rem;">Integrated we are stronger</h1>
-      <p style="padding-top: 13rem;">
-        <small>
-          Wieland Lindenthal - Co-founder and CTO of OpenProject<br>
-          <a href="https://openproject.org">OpenProject.org</a> &middot;
-          <a href="#">@w.lindenthal:openproject.org</a> &middot;
-          <a href="https://fosstodon.org/@wielinde">@wielinde@fosstodon.org</a>
-        </small>
-      </p>
+    <section data-transition="fade-in slide-out">
+      <h3>The wider ecosystem: vendors</h3>
+      <img class="r-frame" src="images/vendors.png" width="700">
     </section>
 
-    <section data-background-image="images/layout/background.png" data-transition="fade fade-out">
-      <h1>
-        <span>
-          Backup
-        </span>
-      </h1>
-    </section>
-
-
-    <section>
-      <h3 class="r-fit-text"><span class="underlayed">Seamless Cross Application User Integration</span><br>
-        Supporting Standards: OAuth 2 Token Exchange and SCIM</h3><br>
-      <img class="r-frame no-border" height="460px" src="images/2024/Keycloak%20idP.png">
-      <aside class="notes">
-        This will push integrations of independent vendors in the Open Source eco-system massively forward.
-        Use cases like our super deep bi-directional integration with Nextcloud will be so much smoozer
-        App suits like openDesk will only find adoption if cross application user integration is solved.
-        It is complex and expensive.
-        It needs to get simpler and out of our way.
-        Fortunately there are the open standards for OIDC and Token Exchange for delegated access but also for user provisioning vis SCIM.
-      </aside>
-    </section>
-
-
-    <section>
-      <h3 class="r-fit-text"><span class="underlayed">Seamless Cross Application User Integration</span><br>
-        XWiki Inegration: The Jira and Confluence alternative</h3><br>
-      <img class="r-frame no-border" width="1000px" src="images/2024/openproject-jira-alternative-opensource.jpg">
-      <aside class="notes">
-        Atlassian stripping their support for on-premises installations.
-        Prices are increasing
-      </aside>
+    <section data-transition="slide-in fade-out">
+      <h3>A digital work place, organized by function</h3>
+      <img class="r-frame" src="images/apps.png" width="700">
     </section>
   </div>
 </div>
@@ -246,7 +357,6 @@
   // Toggle footer visibility based on data-hide-footer="true" attribute
   const footer = document.querySelector('.footer');
   function updateFooterVisibility() {
-      console.log("updateFooterVisibility");
     const currentSlide = Reveal.getCurrentSlide();
     if (currentSlide && currentSlide.hasAttribute('data-hide-footer')) {
       footer.classList.add('hidden');

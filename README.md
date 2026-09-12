@@ -1,6 +1,7 @@
-These are the slide for a talk. They run on GitHub pages:
+These are the slides for "The Sovereign Exit from Jira: OpenProject and Nextcloud Hub",
+a talk for the Nextcloud Community Conference 2026. They run on GitHub pages:
 
-https://wielinde.github.io/talk-fosdem26
+https://wielinde.github.io/talk-nc-berlin-2026
 
 To run the slide locally:
 
