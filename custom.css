@@ -17,3 +17,31 @@ p, ul {
     opacity: 0;
     pointer-events: none;
 }
+
+/* The live footer is `position: fixed`, which the browser's PDF export
+   does not reproduce (it never appears on any exported page). Give print
+   its own per-slide mark instead, hidden on the same slides as the footer. */
+html.print-pdf .footer {
+    display: none;
+}
+
+/* Anchored to .pdf-page (fixed size per page), not the section itself:
+   sections auto-size to content and are vertically centered within the
+   page, so their own top edge shifts per slide depending on the title. */
+html.print-pdf .reveal .slides .pdf-page::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    background-image: url("images/openproject_logo/openproject-icon-white-transparent-1-a5752689.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+html.print-pdf .reveal .slides .pdf-page:has(section[data-hide-footer="true"])::after {
+    content: none;
+}
